@@ -1,12 +1,12 @@
 // react中状态不可直接修改
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Event from './courseinfo/event';
+import Unicafe from './unicafe/index';
 
 const App = () => {
     return (
         <div>
-            <Event></Event>
+            <Unicafe></Unicafe>
         </div>
     );
 };

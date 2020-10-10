@@ -12,6 +12,7 @@ const Button = ({ onClick, text }) => {
     return <button onClick={onClick}>{text}</button>;
 };
 const Event = () => {
+    // 不能在循环、条件表达式或任何不是定义组件的函数的地方调用useState函数
     const [clicks, setClicks] = useState({
         left: 0,
         right: 0,
