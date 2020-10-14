@@ -2,11 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Unicafe from './unicafe/index';
-
+import Anecdotes from './anecdotes/index';
 const App = () => {
     return (
         <div>
-            <Unicafe></Unicafe>
+            {/* <Unicafe></Unicafe> */}
+            <Anecdotes></Anecdotes>
         </div>
     );
 };

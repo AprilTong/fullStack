@@ -1,6 +1,7 @@
 // react中状态不可直接修改
 import React, { useState } from 'react';
 
+// 按钮组件
 const Statistic = (props) => {
     const { text, value } = props;
     return (
@@ -20,10 +21,7 @@ const Statistics = (props) => {
                 <Statistic text="good" value={good}></Statistic>
                 <Statistic text="neutral" value={neutral}></Statistic>
                 <Statistic text="bad" value={bad}></Statistic>
-                {/* <p>good{good}</p>
-                <p>neutral{neutral}</p>
-                <p>bad{bad}</p>
-                <p>all {all}</p> */}
+                <p>all {all}</p>
                 <p>average {(good * 1 + neutral * 0 + bad * -1) / all}</p>
                 <p>positive {(good / all) * 100}%</p>
             </div>
