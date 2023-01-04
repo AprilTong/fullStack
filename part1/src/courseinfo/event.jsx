@@ -1,43 +1,43 @@
 // react中状态不可直接修改
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 const History = ({ allClicks }) => {
     if (allClicks.length === 0) {
-        return <div>the app is used by pressing the buttons</div>;
+        return <div>the app is used by pressing the buttons</div>
     }
-    return <div>buttons press History: {allClicks.join(' ')}</div>;
-};
+    return <div>buttons press History: {allClicks.join(' ')}</div>
+}
 
 const Button = ({ onClick, text }) => {
-    return <button onClick={onClick}>{text}</button>;
-};
+    return <button onClick={onClick}>{text}</button>
+}
 const Event = () => {
     // 不能在循环、条件表达式或任何不是定义组件的函数的地方调用useState函数
     const [clicks, setClicks] = useState({
         left: 0,
         right: 0,
-    });
-    const [allClicks, setAll] = useState([]);
+    })
+    const [allClicks, setAll] = useState([])
     const handleLeftClick = () => {
-        setAll(allClicks.concat('L'));
+        setAll(allClicks.concat('L'))
         setClicks({
             ...clicks,
             left: clicks.left + 1,
-        });
-    };
+        })
+    }
     const handleRightClick = () => {
-        setAll(allClicks.concat('R'));
+        setAll(allClicks.concat('R'))
         setClicks({
             ...clicks,
             right: clicks.right + 1,
-        });
-    };
+        })
+    }
     const hello = (who) => {
         const handler = () => {
-            console.log('hello', who);
-        };
-        return handler;
-    };
+            console.log('hello', who)
+        }
+        return handler
+    }
     return (
         <div>
             {clicks.left}
@@ -47,7 +47,7 @@ const Event = () => {
             {clicks.right}
             <History allClicks={allClicks} />
         </div>
-    );
-};
+    )
+}
 
-export default Event;
+export default Event

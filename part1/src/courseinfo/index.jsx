@@ -1,13 +1,13 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react'
+import ReactDOM from 'react-dom'
 
 const Header = (props) => {
     return (
         <>
             <h1>{props.course}</h1>
         </>
-    );
-};
+    )
+}
 
 const Part = (props) => {
     return (
@@ -17,8 +17,8 @@ const Part = (props) => {
                 {props.data.exercises}
             </p>
         </>
-    );
-};
+    )
+}
 
 const Content = (props) => {
     return (
@@ -27,19 +27,19 @@ const Content = (props) => {
             <Part data={props.parts[1]} />
             <Part data={props.parts[2]} />
         </div>
-    );
-};
+    )
+}
 
 const Total = (props) => {
     const total = props.parts.reduce((current, next) => {
-        return current + next.exercises;
-    }, 0);
+        return current + next.exercises
+    }, 0)
     return (
         <div>
             <p>Number of exercises {total}</p>
         </div>
-    );
-};
+    )
+}
 const App = () => {
     const course = {
         name: 'Half Stack application development',
@@ -57,12 +57,12 @@ const App = () => {
                 exercises: 14,
             },
         ],
-    };
+    }
     return (
         <div>
             <Header course={course.name} />
             <Content parts={course.parts} />
             <Total parts={course.parts} />
         </div>
-    );
-};
+    )
+}
